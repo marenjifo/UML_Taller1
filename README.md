@@ -3,7 +3,7 @@
 
 ## UML Código en Eclipse
 
-## Main:Clase main que ejecuta todo el juego
+## Main: Clase main que ejecuta todo el juego
 
 ### Atributos
 - **log: Logica** Se inicializa la variable de tipo Logica
@@ -15,7 +15,7 @@
 - **draw():void:** Método donde se pinta toda la interfaz gráfica
 - **mousePressed():void:** Ejecuta las acciones del mouse
 
-## Logica
+## Logica: Clase Logica que contiene la interfaz gráfica de la aplicación
 
 ### Atributos
 - **app: PApplet** Creacion objeto PApplet
@@ -31,7 +31,7 @@
 - **interaccionHombre():void:** Método que define todas las interacciones y condiciones del personaje Hombre
 - **ejecutarMouse():void:** Método que contiene acciones del mouse que comienzan la aplicación
 
-## Servidor
+## Servidor: Clase servidor para establecer conexion con un cliente
 
 ### Atributos
 - **ss: ServerSocket** Escucha y espera la conexión de un cliente
@@ -40,7 +40,7 @@
 ### Métodos
 - **enviar () : void** Datos que se envían del servidor al cliente
 
-## Receptor
+## Receptor: Clase Receptor que recibe información del cliente
 
 ### Atributos
 - **s: Socket** Recibe conexion para crear flujo de datos
@@ -48,10 +48,10 @@
 ### Métodos
 - **Receptor(Socket) : void:** Constructor de la clase Receptor
 
-### Thread
+## Thread: Clase para crear hilos
 - **run() : void:** Método que ejecuta el hilo
 
-## Personaje
+## Personaje: Clase que genera los personajes del juego
 
 ### Atributos
 - **app:PApplet** Creación de objeto PApplet
@@ -71,15 +71,15 @@
 - **getVel():int:** Método para saber la velocidad del objeto
 - **setVel():void:** Método para definir la velocidad del objeto
 
-## Piggy
+## Piggy: Clase del personaje #1 Piggy que hereda de Personaje
 - **Piggy(PApplet,int,int)** Constructor de la clase Piggy que recibe un PApplet y dos int
 - **pintar():void:** Pinta el personaje Piggy
 
-## Hombre
+## Hombre: Clase del personaje#2 hombre que hereda de Personaje
 - **Hombre(PApplet,int,int)** Constructor de la clase Hombre que recibe un PApplet y dos int
 - **pintar():void:** Pinta el personaje Hombre
 
-## Objeto
+## Objeto: Clase que genera los recogibles del juego
 
 ### Atributos
 - **app:PApplet** Creación de objeto PApplet
@@ -95,34 +95,34 @@
 - **setX():void:** Método para definir la posición X del objeto
 - **setY():void:** Método para definir la posición Y del objeto
 
-## Manzana
+## Manzana: Clase del objeto Manzana que hereda de Objeto
 - **Manzana(PApplet,int,int)** Constructor de la clase Manzana que recibe un PApplet y dos int
 - **pintar():void:** Pinta el objeto Manzana
 
-## Llave
+## Llave: Clase del objeto Llave que hereda de Objeto
 - **Manzana(PApplet,int,int)** Constructor de la clase Llave que recibe un PApplet y dos int
 - **pintar():void:** Pinta el objeto Llave
 
-## Concentrado
+## Concentrado: Clase del objeto Concentrado que hereda de Objeto
 - **Concentrado(PApplet,int,int)** Constructor de la clase Concentrado que recibe un PApplet y dos int
 - **pintar():void:** Pinta el objeto Concentrado
 
-## Carne
+## Carne: Clase del objeto Carne que hereda de Objeto
 - **Carne(PApplet,int,int)** Constructor de la clase Carne que recibe un PApplet y dos int
 - **pintar():void:** Pinta el objeto Carne
 
-## Bala
+## Bala: Clase del objeto Bala que hereda de Objeto
 - **Bala(PApplet,int,int)** Constructor de la clase Bala que recibe un PApplet y dos int
 - **pintar():void:** Pinta el objeto Bala
 - **mover():void:** Determina el movimiento del objeto Bala
 
-## Tornillo
+## Tornillo: Clase del objeto Tornillo que hereda de Objeto
 - **Tornillo(PApplet,int,int)** Constructor de la clase Tornillo que recibe un PApplet y dos int
 - **pintar():void:** Pinta el objeto Tornillo
 
 ## UML Código en Android
 
-## Main
+## Main: Clase ejecutable que da inicio a toda la aplicación
 
 ### Atributos
 - **btn_up: ImageButton** Recibe la información cuando se oprime el botón de movimiento hacia arriba
@@ -137,7 +137,7 @@
 ### Métodos
 - **onCreate(Bundle):protected void** Método que ejecuta toda la aplicación
 
-## Cliente
+## Cliente: Permite conexión con el servidor
 
 ### Atributos
 - **s: Socket** Sirve para establecer conexion con el servidor
@@ -146,7 +146,7 @@
 - **Cliente(MainActivity)** Constructor de la clase Cliente que recibe un objeto MainActivity
 - **enviar(): void** Método que envia datos al servidor
 
-## Receptor
+## Receptor: Recibe toda la información enviada por el servidor
 
 ### Atributos
 - **s: Socket** Recibe conexion para crear flujo de datos
@@ -154,10 +154,10 @@
 ### Métodos
 - **Receptor(Socket)** Constructor de la clase Receptor que recibe un objeto Socket
 
-## Thread
+## Thread: Clase que permite crear hilos
 - **run() : void:** Método que ejecuta el hilo
 
-## Interface OnMessage
+## Interface OnMessage: Genera un patrón observer para mostrar visualmente lo requerido a partir de lo enviado por el servidor
 - **onReceived(String) : void:** Método que recibe el mensaje enviado por el servidor
 
 
